@@ -113,7 +113,7 @@ spec:
         - name: QUARKUS_HTTP_PORT
           value: {{ .Values.revocationService.port | quote }}
         - name: QUARKUS_HTTP_ACCESS_LOG_ENABLED
-          value: {{ .Values.revocationService.httpAccessLog | default "false" }}
+          value: {{ .Values.revocationService.httpAccessLog | quote | default "false" }}
         - name: QUARKUS_DATASOURCE_JDBC_URL
           valueFrom:
             secretKeyRef:
