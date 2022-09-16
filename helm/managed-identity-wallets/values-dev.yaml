@@ -42,6 +42,27 @@ postgresql:
   secret:
     name: "product-managed-identity-wallets-postgresql"
     path: "managed-identity-wallets/data/dev/postgres-managed-identity-wallets-secret-config"
+  primary:
+    extraVolumeMounts:
+      - name: initdb
+        mountPath: "/docker-entrypoint-initdb.d"
+    extraVolumes:
+      - name: initdb
+        emptyDir: {}
+    initContainers:
+      - name: initdb
+        image: ghcr.io/catenax-ng/product-core-managed-identity-wallets_initdb:latest
+        imagePullPolicy: Always
+        command:
+          - sh
+        args:
+          - -c
+          - |
+            echo "Copying initdb sqls..."
+            cp -R /initdb/* /docker-entrypoint-initdb.d
+        volumeMounts:
+        - name: initdb
+          mountPath: "/docker-entrypoint-initdb.d"
 acapypostgresql:
   secret:
     name: "product-managed-identity-wallets-acapy-postgresql"
