@@ -24,7 +24,7 @@ revocationService:
   clientIssuanceApiUrl: "${SSI_SERVICE_URL:-http://localhost:8080}"
 acapy:
   logLevel: "DEBUG"
-  ledgerUrl: "https://indy-test.idu.network"
+  ledgerUrl: "http://dev.greenlight.bcovrin.vonx.io"
   endpointPort: "8000"
   endpointUrl: "https://managed-identity-wallets.dev.demo.catena-x.net:8000/"
   adminPort: "11000"
