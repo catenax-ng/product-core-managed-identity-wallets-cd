@@ -1,0 +1,45 @@
+auth:
+  jwksUrl: "https://centralidp.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs"
+  issuerUrl: "https://centralidp.demo.catena-x.net/auth/realms/CX-Central"
+  redirectUrl: "https://managed-identity-wallets.int.demo.catena-x.net/callback"
+  realm: "CX-Central"
+  roleMappings: "create_wallets:add_wallets,view_wallets:view_wallets,update_wallets:update_wallets,delete_wallets:delete_wallets,view_wallet:view_wallet,update_wallet:update_wallet"
+  resourceId: "Cl5-CX-Custodian"  
+datapool:
+  url: "https://catenax-bpdm-beta.demo.catena-x.net"
+  authUrl: "https://centralidp.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
+image:
+  registry: "ghcr.io"
+  tag: "latest"
+revocation:
+  revocationServiceUrl: http://localhost:8086
+  refreshHour: "3"
+revocationService:
+  port: "8086"
+  httpAccessLog: true
+  baseUrlForCredentialList: "https://managed-identity-wallets.beta.demo.catena-x.net/api/credentials/"
+  minIssueInterval: "2"
+  clientIssuanceApiUrl: "${SSI_SERVICE_URL:-http://localhost:8080}"
+acapy:
+  logLevel: "INFO"
+  endpointPort: "8000"
+  endpointUrl: "https://managed-identity-wallets.beta.demo.catena-x.net:8000/"
+  adminPort: "11000"
+  adminUrl: "http://localhost:11000"
+  secret:
+    name: "catenax-managed-identity-wallets-acapy-secrets"
+    path: "managed-identity-wallets/data/int/catenax-managed-identity-wallets-acapy-secrets"
+certificate:
+  host: "managed-identity-wallets.beta.demo.catena-x.net"
+managedIdentityWallets:
+  secret:
+    name: "catenax-managed-identity-wallets-secrets"
+    path: "managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets"
+postgresql:
+  secret:
+    name: "product-managed-identity-wallets-postgresql"
+    path: "managed-identity-wallets/data/beta/postgres-managed-identity-wallets-secret-config"
+acapypostgresql:
+  secret:
+    name: "product-managed-identity-wallets-acapy-postgresql"
+    path: "managed-identity-wallets/data/beta/postgres-acapy-secret-config"
