@@ -21,14 +21,14 @@ spec:
       containers:
       - name: catenax-managed-identity-wallets
         {{- if .Values.image.registry }}
-        image: {{ .Values.image.registry }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+        image: {{ .Values.image.registry }}/{{ .Values.image.name }}:{{ default .Chart.appVersion .Values.image.tag }}
         {{- else }}
-        image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+        image: {{ .Values.image.name }}:{{ default .Chart.appVersion .Values.image.tag }}
         {{- end }}
         imagePullPolicy: Always
         env:
         - name: APP_VERSION
-          value: {{ .Values.app.version }}
+          value: {{ .Chart.appVersion }}
         - name: ALLOW_EMPTY_PASSWORD
           value: {{ .Values.allowEmptyPassword | default "no" }}
         - name: CX_DB_JDBC_URL
