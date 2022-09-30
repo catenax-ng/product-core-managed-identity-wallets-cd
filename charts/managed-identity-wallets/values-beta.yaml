@@ -9,23 +9,12 @@ datapool:
   url: "https://catenax-bpdm-beta.demo.catena-x.net"
   authUrl: "https://centralidp.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
 image:
-  registry: "ghcr.io"
   tag: "latest"
-revocation:
-  revocationServiceUrl: http://localhost:8086
-  refreshHour: "3"
 revocationService:
-  port: "8086"
-  httpAccessLog: true
   baseUrlForCredentialList: "https://managed-identity-wallets.beta.demo.catena-x.net/api/credentials/"
-  minIssueInterval: "2"
   clientIssuanceApiUrl: "${SSI_SERVICE_URL:-http://localhost:8080}"
 acapy:
-  logLevel: "INFO"
-  endpointPort: "8000"
   endpointUrl: "https://managed-identity-wallets.beta.demo.catena-x.net:8000/"
-  adminPort: "11000"
-  adminUrl: "http://localhost:11000"
   secret:
     name: "catenax-managed-identity-wallets-acapy-secrets"
     path: "managed-identity-wallets/data/int/catenax-managed-identity-wallets-acapy-secrets"
