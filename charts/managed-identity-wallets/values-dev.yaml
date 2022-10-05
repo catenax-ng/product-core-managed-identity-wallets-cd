@@ -2,6 +2,8 @@ auth:
   jwksUrl: "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs"
   issuerUrl: "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central"
   redirectUrl: "https://managed-identity-wallets.dev.demo.catena-x.net/callback"
+image:
+  tag: "latest-develop"
 datapoolUrl: "https://catenax-bpdm-dev.demo.catena-x.net"
 datapool:
   url: "https://catenax-bpdm-dev.demo.catena-x.net"
