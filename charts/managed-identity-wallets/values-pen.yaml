@@ -9,7 +9,7 @@ image:
   tag: "latest-develop"
 revocationService:
   baseUrlForCredentialList: "https://managed-identity-wallets.pen.demo.catena-x.net/api/credentials/"
-  clientIssuanceApiUrl: "${SSI_SERVICE_URL:-http://localhost:8080}" 
+  clientIssuanceApiUrl: "http://localhost:8080"
 acapy:
   logLevel: "DEBUG"
   ledgerUrl: "http://dev.greenlight.bcovrin.vonx.io"

@@ -7,7 +7,7 @@ datapool:
   authUrl: "https://centralidp.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
 revocationService:
   baseUrlForCredentialList: "https://managed-identity-wallets.beta.demo.catena-x.net/api/credentials/"
-  clientIssuanceApiUrl: "${SSI_SERVICE_URL:-http://localhost:8080}"
+  clientIssuanceApiUrl: "http://localhost:8080"
 acapy:
   endpointUrl: "https://managed-identity-wallets.beta.demo.catena-x.net:8000/"
   secret:
