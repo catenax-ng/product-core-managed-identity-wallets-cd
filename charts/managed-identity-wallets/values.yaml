@@ -6,6 +6,7 @@ auth:
 image:
   name: "catenax-ng/product-core-managed-identity-wallets_service"
   registry: "ghcr.io"
+  secret: "acr-credentials"
 allowEmptyPassword: "\"yes\""
 db:
   jdbcDriver: "org.postgresql.Driver"
@@ -34,14 +35,29 @@ acapy:
   endpointPort: "8000"
   adminPort: "11000"
   adminUrl: "http://localhost:11000"
+  secret:
+    apikey: ""
+    walletseed: ""
+    dbaccount: ""
+    dbadminuser: ""
+    dbadminpassword: ""
+    dbpassword: ""
+    jwtsecret: ""
+    walletkey: ""
+ingress:
+  enabled: false
 acapypostgresql:
   enabled: true
   auth:
-    existingSecret: "product-managed-identity-wallets-acapy-postgresql"
+    existingSecret: product-managed-identity-wallets-acapypostgresql
+  secret:
+    password: ""
+    postgrespassword: ""
+    user: ""
 postgresql:
   enabled: true
   auth:
-    existingSecret: "product-managed-identity-wallets-postgresql"
+    existingSecret: product-managed-identity-wallets-postgresql
   primary:
     extraVolumeMounts:
       - name: initdb
@@ -63,8 +79,20 @@ postgresql:
         volumeMounts:
         - name: initdb
           mountPath: "/docker-entrypoint-initdb.d"
+  secret:
+    password: ""
+    postgrespassword: ""
+    user: ""
 datapool:
   grantType: "client_credentials"
   scope: "openid"
   refreshHour: "23"
-isLocal: false
+managedIdentityWallets:
+  secret:
+    jdbcurl: ""
+    authclientid: ""
+    authclientsecret: ""
+    bpdmauthclientid: ""
+    bpdmauthclientsecret: ""
+certificate:
+  host: "localhost"

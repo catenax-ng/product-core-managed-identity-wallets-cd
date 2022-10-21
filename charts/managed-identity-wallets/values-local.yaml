@@ -20,6 +20,8 @@ acapy:
   adminUrl: "http://localhost:11000"
   imageName: "bcgovimages/aries-cloudagent"
   tag: "py36-1.16-1_0.7.4"
+ingress:
+  enabled: true
 certificate:
   host: "managed-identity-wallets.local.demo.catena-x.net"
 image:
