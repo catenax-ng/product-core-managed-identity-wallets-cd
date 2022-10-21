@@ -6,6 +6,7 @@ auth:
 image:
   name: "catenax-ng/product-core-managed-identity-wallets_service"
   registry: "ghcr.io"
+  secret: "acr-credentials"
 allowEmptyPassword: "\"yes\""
 db:
   jdbcDriver: "org.postgresql.Driver"
@@ -34,10 +35,25 @@ acapy:
   endpointPort: "8000"
   adminPort: "11000"
   adminUrl: "http://localhost:11000"
+  secret:
+    apikey: ""
+    walletseed: ""
+    dbaccount: ""
+    dbadminuser: ""
+    dbadminpassword: ""
+    dbpassword: ""
+    jwtsecret: ""
+    walletkey: ""
+ingress:
+  enabled: true
 acapypostgresql:
   enabled: true
   auth:
     existingSecret: "product-managed-identity-wallets-acapy-postgresql"
+  secret:
+    password: ""
+    postgrespassword: ""
+    user: ""
 postgresql:
   enabled: true
   auth:
@@ -63,8 +79,20 @@ postgresql:
         volumeMounts:
         - name: initdb
           mountPath: "/docker-entrypoint-initdb.d"
+  secret:
+    password: ""
+    postgrespassword: ""
+    user: ""
 datapool:
   grantType: "client_credentials"
   scope: "openid"
   refreshHour: "23"
-isLocal: false
+managedIdentityWallets:
+  secret:
+    jdbcurl: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#cx-db-jdbc-url>
+    authclientid: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#cx-auth-client-id>
+    authclientsecret: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#cx-auth-client-secret>
+    bpdmauthclientid: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#bpdm-auth-client-id>
+    bpdmauthclientsecret: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#bpdm-auth-client-secret>
+certificate:
+  host: "localhost"
