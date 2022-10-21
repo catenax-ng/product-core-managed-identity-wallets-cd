@@ -89,7 +89,7 @@ spec:
         - name: ACAPY_ADMIN_API_KEY
           valueFrom:
             secretKeyRef:
-              name: {{ include "managed-identity-wallets.fullname" . }}-secret
+              name: {{ include "managed-identity-wallets.fullname" . }}-acapy
               key: acapy-admin-api-key
         - name: CX_BPN
           value: {{ .Values.wallet.baseWalletBpn }}
