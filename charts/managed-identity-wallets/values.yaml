@@ -49,7 +49,7 @@ ingress:
 acapypostgresql:
   enabled: true
   auth:
-    existingSecret: {{ include "managed-identity-wallets.fullname" . }}-acapypostgresql
+    existingSecret: product-managed-identity-wallets-acapypostgresql
   secret:
     password: ""
     postgrespassword: ""
@@ -57,7 +57,7 @@ acapypostgresql:
 postgresql:
   enabled: true
   auth:
-    existingSecret: {{ include "managed-identity-wallets.fullname" . }}-postgresql
+    existingSecret: product-managed-identity-wallets-postgresql
   primary:
     extraVolumeMounts:
       - name: initdb
