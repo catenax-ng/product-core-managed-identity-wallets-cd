@@ -45,7 +45,7 @@ acapy:
     jwtsecret: ""
     walletkey: ""
 ingress:
-  enabled: true
+  enabled: false
 acapypostgresql:
   enabled: true
   auth:
@@ -89,10 +89,10 @@ datapool:
   refreshHour: "23"
 managedIdentityWallets:
   secret:
-    jdbcurl: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#cx-db-jdbc-url>
-    authclientid: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#cx-auth-client-id>
-    authclientsecret: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#cx-auth-client-secret>
-    bpdmauthclientid: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#bpdm-auth-client-id>
-    bpdmauthclientsecret: <path:managed-identity-wallets/data/beta/catenax-managed-identity-wallets-secrets/catenax-managed-identity-wallets-secrets#bpdm-auth-client-secret>
+    jdbcurl: ""
+    authclientid: ""
+    authclientsecret: ""
+    bpdmauthclientid: ""
+    bpdmauthclientsecret: ""
 certificate:
   host: "localhost"

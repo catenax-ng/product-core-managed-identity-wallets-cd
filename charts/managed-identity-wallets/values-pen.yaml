@@ -10,6 +10,8 @@ image:
 revocationService:
   baseUrlForCredentialList: "https://managed-identity-wallets.pen.demo.catena-x.net/api/credentials/"
   clientIssuanceApiUrl: "http://localhost:8080"
+ingress:
+  enabled: true
 certificate:
   host: "managed-identity-wallets-pen.dev.demo.catena-x.net"
 acapy:
