@@ -8,4 +8,4 @@ spec:
   ports:
   - port: 8080
   selector:
-    app: catenax-managed-identity-wallets
+    {{- include "managed-identity-wallets.selectorLabels" . | nindent 6 }}
