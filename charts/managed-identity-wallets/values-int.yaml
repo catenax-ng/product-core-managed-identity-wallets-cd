@@ -35,11 +35,11 @@ managedIdentityWallets:
     bpdmauthclientsecret: <path:managed-identity-wallets/data/int/catenax-managed-identity-wallets-secrets#bpdm-auth-client-secret>
 postgresql:
   secret:
-    password: <path:managed-identity-wallets/data/int/postgres-managed-identity-wallets-secret-config/product-managed-identity-wallets-postgresql#password>
-    postgrespassword: <path:managed-identity-wallets/data/int/postgres-managed-identity-wallets-secret-config/product-managed-identity-wallets-postgresql#postgres-password>
-    user: <path:managed-identity-wallets/data/int/postgres-managed-identity-wallets-secret-config/product-managed-identity-wallets-postgresql#user>
+    password: <path:managed-identity-wallets/data/int/postgres-managed-identity-wallets-secret-config#password>
+    postgrespassword: <path:managed-identity-wallets/data/int/postgres-managed-identity-wallets-secret-config#postgres-password>
+    user: <path:managed-identity-wallets/data/int/postgres-managed-identity-wallets-secret-config#user>
 acapypostgresql:
   secret:
-    password: <path:managed-identity-wallets/data/int/postgres-acapy-secret-config/product-managed-identity-wallets-acapy-postgresql#password>
-    postgrespassword: <path:managed-identity-wallets/data/int/postgres-acapy-secret-config/product-managed-identity-wallets-acapy-postgresql#postgres-password>
-    user: <path:managed-identity-wallets/data/int/postgres-acapy-secret-config/product-managed-identity-wallets-acapy-postgresql#user>
+    password: <path:managed-identity-wallets/data/int/postgres-acapy-secret-config#password>
+    postgrespassword: <path:managed-identity-wallets/data/int/postgres-acapy-secret-config#postgres-password>
+    user: <path:managed-identity-wallets/data/int/postgres-acapy-secret-config#user>
