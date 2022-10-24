@@ -3,6 +3,27 @@ entries:
   managed-identity-wallets:
   - apiVersion: v2
     appVersion: 2.1.1
+    created: "2022-10-24T15:51:04.358825918Z"
+    dependencies:
+    - alias: acapypostgresql
+      condition: acapypostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: Managed Identity Wallets Service
+    digest: 9e0c8502512c34b9a6b7748383da47207c7e0e8c103b996805844d2296661702
+    name: managed-identity-wallets
+    type: application
+    urls:
+    - https://github.com/catenax-ng/product-core-managed-identity-wallets-cd/releases/download/managed-identity-wallets-0.5.13/managed-identity-wallets-0.5.13.tgz
+    version: 0.5.13
+  - apiVersion: v2
+    appVersion: 2.1.1
     created: "2022-10-07T20:51:29.479619579Z"
     dependencies:
     - alias: acapypostgresql
@@ -148,4 +169,4 @@ entries:
     urls:
     - https://github.com/catenax-ng/product-core-managed-identity-wallets-cd/releases/download/managed-identity-wallets-0.5.2/managed-identity-wallets-0.5.2.tgz
     version: 0.5.2
-generated: "2022-10-07T20:51:29.479732377Z"
+generated: "2022-10-24T15:51:04.358863518Z"
