@@ -37,14 +37,14 @@ managedIdentityWallets:
     bpdmauthclientsecret: <path:managed-identity-wallets/data/dev/catenax-managed-identity-wallets-secrets#bpdm-auth-client-secret>
 postgresql:
   auth:
-    existingSecret: product-managed-identity-wallets-dev-postgresql
+    existingSecret: product-managed-identity-wallets-postgresql
   secret:
     password: <path:managed-identity-wallets/data/pen/postgres-managed-identity-wallets-secret-config#password>
     postgrespassword: <path:managed-identity-wallets/data/pen/postgres-managed-identity-wallets-secret-config#postgres-password>
     user: <path:managed-identity-wallets/data/pen/postgres-managed-identity-wallets-secret-config#user>
 acapypostgresql:
   auth:
-    existingSecret: product-managed-identity-wallets-dev-acapypostgresql
+    existingSecret: product-managed-identity-wallets-acapypostgresql
   secret:
     password: <path:managed-identity-wallets/data/pen/postgres-acapy-secret-config#password>
     postgrespassword: <path:managed-identity-wallets/data/pen/postgres-acapy-secret-config#postgres-password>
