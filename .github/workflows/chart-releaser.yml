@@ -1,9 +1,12 @@
-name: Release Chart
+name: Release Charts
 
 on:
   push:
-    tags:
-      - '*'
+    # prevent unnecessary GH action runs for files outside of charts folder
+    paths:
+      - 'charts/**'
+    branches:
+      - main
 
 jobs:
   release:
@@ -33,6 +36,6 @@ jobs:
           helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Run chart-releaser
-        uses: luisico/chart-releaser-action@on-tags
+        uses: helm/chart-releaser-action@v1.4.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
