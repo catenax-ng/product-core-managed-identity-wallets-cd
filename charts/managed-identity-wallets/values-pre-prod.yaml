@@ -3,6 +3,8 @@ auth:
   issuerUrl: "https://centralidp.pre-prod.demo.catena-x.net/auth/realms/CX-Central"
   redirectUrl: "https://managed-identity-wallets.pre-prod.demo.catena-x.net/callback"
 datapoolUrl: "https://catenax-bpdm-pre-prod.demo.catena-x.net"
+wallet:
+  baseWalletBpn: "BPNL00000003CRHK"
 datapool:
   url: "https://catenax-bpdm-pre-prod.demo.catena-x.net"
   authUrl: "https://centralidp.pre-prod.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
