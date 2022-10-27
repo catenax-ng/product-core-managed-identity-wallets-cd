@@ -24,6 +24,8 @@ revocationService:
   port: "8086"
   httpAccessLog: true
   minIssueInterval: "2"
+  baseUrlForCredentialList: "https//localhost:8080/api/credentials/"
+  clientIssuanceApiUrl: "http://localhost:8080"
 acapy:
   imageName: "bcgovimages/aries-cloudagent"
   tag: "py36-1.16-1_0.7.4"
