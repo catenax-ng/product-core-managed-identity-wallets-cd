@@ -31,19 +31,19 @@ acapy:
   label: "CatenaXIssuer"
   logLevel: "INFO"
   networkIdentifier: "idunion:test"
-  databaseHost: "product-managed-identity-wallets-acapypostgresql"
+  databaseHost: "acapypostgresql"
   endpointPort: "8000"
   adminPort: "11000"
   adminUrl: "http://localhost:11000"
   secret:
-    apikey: ""
-    walletseed: ""
-    dbaccount: ""
-    dbadminuser: ""
-    dbadminpassword: ""
-    dbpassword: ""
-    jwtsecret: ""
-    walletkey: ""
+    apikey: "0"
+    walletseed: "0"
+    dbaccount: "postgres"
+    dbadminuser: "postgres"
+    dbadminpassword: "postgres"
+    dbpassword: "postgres"
+    jwtsecret: "0"
+    walletkey: "0"
 ingress:
   enabled: false
 acapypostgresql:
@@ -51,9 +51,9 @@ acapypostgresql:
   auth:
     existingSecret: product-managed-identity-wallets-acapypostgresql
   secret:
-    password: ""
-    postgrespassword: ""
-    user: ""
+    password: "postgres"
+    postgrespassword: "postgres"
+    user: "postgres"
 postgresql:
   enabled: true
   auth:
@@ -80,19 +80,19 @@ postgresql:
         - name: initdb
           mountPath: "/docker-entrypoint-initdb.d"
   secret:
-    password: ""
-    postgrespassword: ""
-    user: ""
+    password: "postgres"
+    postgrespassword: "postgres"
+    user: "postgres"
 datapool:
   grantType: "client_credentials"
   scope: "openid"
   refreshHour: "23"
 managedIdentityWallets:
   secret:
-    jdbcurl: ""
-    authclientid: ""
-    authclientsecret: ""
-    bpdmauthclientid: ""
-    bpdmauthclientsecret: ""
+    jdbcurl: "jdbc:postgresql://postgresql:5432/postgres?user=postgres&password=postgres"
+    authclientid: "clientid"
+    authclientsecret: "client"
+    bpdmauthclientid: "clientid"
+    bpdmauthclientsecret: "client"
 certificate:
   host: "localhost"
