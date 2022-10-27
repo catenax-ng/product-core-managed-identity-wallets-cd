@@ -20,6 +20,12 @@ jobs:
         with:
           version: v3.9.3
 
+      - name: Add Helm repos
+        run: |
+          cd charts/managed-identity-wallets
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm dependency update
+
       # Setup python as a prerequisite for chart linting 
       - uses: actions/setup-python@v2
         with:
