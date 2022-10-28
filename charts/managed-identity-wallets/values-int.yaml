@@ -5,7 +5,7 @@ auth:
 image:
   tag: "2.1.1"
 datapool:
-  url: "https://catenax-bpdm-int.demo.catena-x.net"
+  url: "https://partners-pool.int.demo.catena-x.net"
   authUrl: "https://centralidp.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
 revocationService:
   baseUrlForCredentialList: "https://managed-identity-wallets.int.demo.catena-x.net/api/credentials/"

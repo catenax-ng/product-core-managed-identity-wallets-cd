@@ -4,9 +4,8 @@ auth:
   redirectUrl: "https://managed-identity-wallets.dev.demo.catena-x.net/callback"
 image:
   tag: "latest-develop"
-datapoolUrl: "https://catenax-bpdm-dev.demo.catena-x.net"
 datapool:
-  url: "https://catenax-bpdm-dev.demo.catena-x.net"
+  url: "https://partners-pool.dev.demo.catena-x.net"
   authUrl: "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
 revocationService:
   baseUrlForCredentialList: "https://managed-identity-wallets.dev.demo.catena-x.net/api/credentials/"

@@ -89,6 +89,8 @@ datapool:
   grantType: "client_credentials"
   scope: "openid"
   refreshHour: "23"
+  url: ""
+  authUrl: ""
 managedIdentityWallets:
   secret:
     jdbcurl: "jdbc:postgresql://postgresql:5432/postgres?user=postgres&password=postgres"

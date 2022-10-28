@@ -2,11 +2,10 @@ auth:
   jwksUrl: "https://centralidp.pre-prod.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs"
   issuerUrl: "https://centralidp.pre-prod.demo.catena-x.net/auth/realms/CX-Central"
   redirectUrl: "https://managed-identity-wallets.pre-prod.demo.catena-x.net/callback"
-datapoolUrl: "https://catenax-bpdm-pre-prod.demo.catena-x.net"
 wallet:
   baseWalletBpn: "BPNL00000003CRHK"
 datapool:
-  url: "https://catenax-bpdm-pre-prod.demo.catena-x.net"
+  url: "https://partners-pool.pre-prod.demo.catena-x.net"
   authUrl: "https://centralidp.pre-prod.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token"
 revocationService:
   baseUrlForCredentialList: "https://managed-identity-wallets.pre-prod.demo.catena-x.net/api/credentials/"
