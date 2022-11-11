@@ -51,6 +51,26 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
+Invoke include on given definition with postgresql dependency context
+Usage: include "acapyPostgresContext" (list $ "your_include_function_here")
+*/}}
+{{- define "acapyPostgresContext" -}}
+{{- $ := index . 0 }}
+{{- $function := index . 1 }}
+{{- include $function (dict "Values" $.Values.acapypostgresql "Chart" (dict "Name" "postgresql") "Release" $.Release) }}
+{{- end }}
+
+{{/*
+Invoke include on given definition with postgresql dependency context
+Usage: include "postgresContext" (list $ "your_include_function_here")
+*/}}
+{{- define "postgresContext" -}}
+{{- $ := index . 0 }}
+{{- $function := index . 1 }}
+{{- include $function (dict "Values" $.Values.postgresql "Chart" (dict "Name" "postgresql") "Release" $.Release) }}
+{{- end }}
+
+{{/*
 Create the name of the service account to use
 */}}
 {{- define "managed-identity-wallets.serviceAccountName" -}}
