@@ -57,7 +57,7 @@ Usage: include "acapyPostgresContext" (list $ "your_include_function_here")
 {{- define "acapyPostgresContext" -}}
 {{- $ := index . 0 }}
 {{- $function := index . 1 }}
-{{- include $function (dict "Values" $.Values.acapypostgresql "Chart" (dict "Name" "postgresql") "Release" $.Release) }}
+{{- include $function (dict "Values" $.Values.acapypostgresql "Chart" (dict "Name" "acapypostgresql") "Release" $.Release) }}
 {{- end }}
 
 {{/*
