@@ -45,6 +45,6 @@ acapypostgresql:
     password: <path:managed-identity-wallets/data/pen/postgres-acapy-secret-config#password>
     postgrespassword: <path:managed-identity-wallets/data/pen/postgres-acapy-secret-config#postgres-password>
     user: <path:managed-identity-wallets/data/pen/postgres-acapy-secret-config#user>
-  readReplicas:
+  replicas:
     persistence:
       size: 16Gi
