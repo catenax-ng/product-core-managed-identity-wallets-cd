@@ -48,6 +48,3 @@ acapypostgresql:
   primary:
     persistence:
       size: 16Gi
-  replicas:
-    persistence:
-      size: 16Gi
