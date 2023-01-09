@@ -15,8 +15,8 @@ logging:
   exposed: "INFO"
 wallet:
   baseWalletBpn: "BPNL000000000000"
-  baseWalletShortDid: "QW5of989kdUeizZvWPPvZk"
-  baseWalletVerkey: "DovjfWCP4Ebw8CU7Uk93PpeaKXSiic4KAoGANxp9o15w"
+  baseWalletShortDid: "MhLrwtKpZhNCzazMeofPQH"
+  baseWalletVerkey: "CHEC4PRQmP73A9UD7vQ6tnLAm9aoXLPhEtnGSMiAyVZj"
   baseWalletName: "Catena-X"
 revocation:
   refreshHour: "3"

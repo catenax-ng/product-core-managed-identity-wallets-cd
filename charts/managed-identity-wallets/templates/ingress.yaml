@@ -33,9 +33,28 @@ spec:
                 name: catenax-managed-identity-wallets
                 port:
                   number: 8080
-    # TODO Acapy inbound calls should be forwared to 8000 and 8003. This is related 
-    # to the values acapy.endorser.endpointUrl and acapy.mt.endpointUrl.
-    # Mabye a new host is required to achive this
+    - host: {{ .Values.certificate.host }}
+      port:
+        number: 8000
+      http:
+        paths:
+          - path:
+            backend:
+              service:
+                name: catenax-managed-identity-wallets
+                port:
+                  number: 8000
+    - host: {{ .Values.certificate.host }}
+      port:
+        number: 8003
+      http:
+        paths:
+          - path:
+            backend:
+              service:
+                name: catenax-managed-identity-wallets
+                port:
+                  number: 8003
   tls:
     - hosts:
         - {{ .Values.certificate.host }}

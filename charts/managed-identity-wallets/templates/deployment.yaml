@@ -82,15 +82,22 @@ spec:
           value: {{ .Values.datapool.authUrl }}
         - name: BPDM_PULL_DATA_AT_HOUR
           value: {{ .Values.datapool.refreshHour | quote }}
-        - name: ACAPY_API_ADMIN_URL
-          value: {{ .Values.acapy.adminUrl }}
         - name: ACAPY_NETWORK_IDENTIFIER
-          value: {{ .Values.acapy.networkIdentifier }}
+          value: {{ .Values.acapy.networkIdentifier }}  
+        - name: ACAPY_API_ADMIN_URL
+          value: {{ .Values.acapy.mt.adminUrl }}
         - name: ACAPY_ADMIN_API_KEY
           valueFrom:
             secretKeyRef:
               name: {{ include "managed-identity-wallets.fullname" . }}-acapy
-              key: acapy-admin-api-key
+              key: acapy-mt-admin-api-key
+        - name: ACAPY_BASE_WALLET_API_ADMIN_URL
+          value: {{ .Values.acapy.endorser.adminUrl }}
+        - name: ACAPY_BASE_WALLET_ADMIN_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "managed-identity-wallets.fullname" . }}-acapy
+              key: acapy-endorser-admin-api-key
         - name: CX_BPN
           value: {{ .Values.wallet.baseWalletBpn }}
         - name: CX_SHORT_DID
@@ -208,6 +215,8 @@ spec:
           limits:
             cpu: 250m
             memory: 256Mi
+        ports:
+        - containerPort: 8000
         command: ["/bin/bash"]
         args: ["-c", "aca-py start \
           -e $(ACAPY_ENDPOINT_URL) \
@@ -304,6 +313,8 @@ spec:
           limits:
             cpu: 250m
             memory: 256Mi
+        ports:
+        - containerPort: 8003   
         command: ["/bin/bash"]
         args: ["-c", "aca-py start \
           -e $(ACAPY_ENDPOINT_URL) \
