@@ -16,6 +16,10 @@ metadata:
               deny all;
               return 403;
             }
+          location ~* /webhook/topic/ {
+            deny all;
+            return 403;
+          }
 
     # If you encounter a redirect loop or are getting a 307 response code
     # then you need to force the nginx ingress to connect to the backend using HTTPS.
