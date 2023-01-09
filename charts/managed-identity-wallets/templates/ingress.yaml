@@ -15,7 +15,8 @@ metadata:
           location ~* /list-credential/ {
               deny all;
               return 403;
-            }
+          }
+
           location ~* /webhook/topic/ {
             deny all;
             return 403;
