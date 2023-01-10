@@ -3,7 +3,7 @@ auth:
   issuerUrl: "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central"
   redirectUrl: "https://managed-identity-wallets.dev.demo.catena-x.net/callback"
 image:
-  tag: "latest-develop"
+  tag: "3.0.0-rc" # "latest-develop"
 wallet:
   baseWalletBpn: "BPNL000000000000"
   baseWalletShortDid: "MhLrwtKpZhNCzazMeofPQH"
