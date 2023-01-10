@@ -31,23 +31,23 @@ spec:
     - host: {{ .Values.certificate.host }}
       http:
         paths:
-        - path: /acapy-connection-base
-          pathType: Prefix
-          backend:
-            service:
-              name: catenax-managed-identity-wallets-acapy-endorser
-              port:
-                number: 8000
+          - path: /acapy-connection-base
+            pathType: Prefix
+            backend:
+              service:
+                name: catenax-managed-identity-wallets
+                port:
+                  number: 8000
     - host: {{ .Values.certificate.host }}
       http:
         paths:
-        - path: /acapy-connection-mt
-          pathType: Prefix
-          backend:
-            service:
-              name: catenax-managed-identity-wallets-acapy-mt
-              port:
-                number: 8003
+          - path: /acapy-connection-mt
+            pathType: Prefix
+            backend:
+              service:
+                name: catenax-managed-identity-wallets
+                port:
+                  number: 8003
     - host: {{ .Values.certificate.host }}
       http:
         paths:
@@ -55,7 +55,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: catenax-managed-identity-wallets-miw
+                name: catenax-managed-identity-wallets
                 port:
                   number: 8080
   tls:
