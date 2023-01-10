@@ -6,7 +6,6 @@ auth:
 image:
   name: "catenax-ng/product-core-managed-identity-wallets_service"
   registry: "ghcr.io"
-  #"3.0.0-develop"
   tag: "3.0.0-rc"
   secret: "acr-credentials"
 allowEmptyPassword: "\"yes\""
