@@ -6,13 +6,13 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - name: miw
+  - name: catenax-managed-identity-wallets-miw
     port: 8080
     targetPort: 8080
-  - name: acapy-endorser
+  - name: catenax-managed-identity-wallets-acapy-endorser
     port: 8000
     targetPort: 8000
-  - name: acapy-mt
+  - name: catenax-managed-identity-wallets-acapy-mt
     port: 8003
     targetPort: 8003
   selector:
