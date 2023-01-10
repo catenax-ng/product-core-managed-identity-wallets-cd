@@ -6,14 +6,6 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - name: catenax-managed-identity-wallets-miw
-    port: 8080
-    targetPort: 8080
-  - name: catenax-managed-identity-wallets-acapy-endorser
-    port: 8000
-    targetPort: 8000
-  - name: catenax-managed-identity-wallets-acapy-mt
-    port: 8003
-    targetPort: 8003
+  - port: 8080
   selector:
     {{- include "managed-identity-wallets.selectorLabels" . | nindent 6 }}
