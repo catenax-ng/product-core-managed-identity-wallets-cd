@@ -6,6 +6,7 @@ auth:
 image:
   name: "eclipse-tractusx/managed-identity-wallets_service"
   registry: "ghcr.io"
+  tag: "3.0.0-develop"
   secret: "acr-credentials"
 allowEmptyPassword: "\"yes\""
 db:
