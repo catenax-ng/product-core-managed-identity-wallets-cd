@@ -32,8 +32,7 @@ spec:
       http:
         paths:
           - path: /acapy-connection-base
-            pathType: Prefix
-            pathRewrite: /
+            pathType: Exact
             backend:
               service:
                 name: catenax-managed-identity-wallets-acapy-base
@@ -43,8 +42,7 @@ spec:
       http:
         paths:
           - path: /acapy-connection-mt
-            pathType: Prefix
-            pathRewrite: /
+            pathType: Exact
             backend:
               service:
                 name: catenax-managed-identity-wallets-acapy-mt
