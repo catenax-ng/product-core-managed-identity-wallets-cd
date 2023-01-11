@@ -33,9 +33,10 @@ spec:
         paths:
           - path: /acapy-connection-base
             pathType: Prefix
+            pathRewrite: /
             backend:
               service:
-                name: catenax-managed-identity-wallets
+                name: catenax-managed-identity-wallets-acapy-base
                 port:
                   number: 8000
     - host: {{ .Values.certificate.host }}
@@ -43,9 +44,10 @@ spec:
         paths:
           - path: /acapy-connection-mt
             pathType: Prefix
+            pathRewrite: /
             backend:
               service:
-                name: catenax-managed-identity-wallets
+                name: catenax-managed-identity-wallets-acapy-mt
                 port:
                   number: 8003
     - host: {{ .Values.certificate.host }}
