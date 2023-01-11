@@ -62,7 +62,7 @@ acapy:
     endpointPort: "8003"
     adminPort: "11003"
     adminUrl: "http://localhost:11003"
-    endorserPublicDid: "QW5of989kdUeizZvWPPvZk"
+    endorserPublicDid: "MhLrwtKpZhNCzazMeofPQH"
     webhookUrl: "http://localhost:8080/webhook"
     secret:
       apikey: "0"

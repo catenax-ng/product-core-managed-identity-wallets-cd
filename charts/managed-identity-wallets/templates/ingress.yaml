@@ -31,7 +31,7 @@ spec:
     - host: {{ .Values.certificate.host }}
       http:
         paths:
-          - path: /acapy-connection-base
+          - path: /didcomm-base
             pathType: Exact
             backend:
               service:
@@ -41,7 +41,7 @@ spec:
     - host: {{ .Values.certificate.host }}
       http:
         paths:
-          - path: /acapy-connection-mt
+          - path: /didcomm-managed-wallets
             pathType: Exact
             backend:
               service:
