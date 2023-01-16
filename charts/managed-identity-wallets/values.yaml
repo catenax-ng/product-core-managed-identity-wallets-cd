@@ -4,9 +4,9 @@ auth:
   roleMappings: "create_wallets:add_wallets,view_wallets:view_wallets,update_wallets:update_wallets,delete_wallets:delete_wallets,view_wallet:view_wallet,update_wallet:update_wallet"
   resourceId: "Cl5-CX-Custodian"
 image:
-  name: "catenax-ng/product-core-managed-identity-wallets_service"
+  name: "catenax-ng/tx-managed-identity-wallets_service"
   registry: "ghcr.io"
-  tag: "3.0.0-rc"
+  tag: "3.0.0"
   secret: "acr-credentials"
 allowEmptyPassword: "\"yes\""
 db:

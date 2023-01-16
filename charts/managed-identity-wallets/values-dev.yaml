@@ -2,8 +2,6 @@ auth:
   jwksUrl: "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/certs"
   issuerUrl: "https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central"
   redirectUrl: "https://managed-identity-wallets.dev.demo.catena-x.net/callback"
-image:
-  tag: "3.0.0-rc"
 wallet:
   baseWalletBpn: "BPNL000000000000"
   baseWalletShortDid: "MhLrwtKpZhNCzazMeofPQH"
