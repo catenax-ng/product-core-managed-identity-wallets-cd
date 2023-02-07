@@ -3,7 +3,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: catenax-managed-identity-wallets-ingress
+  name: managed-identity-wallets-ingress
   namespace: {{ .Values.Namespace }}
   annotations:
     kubernetes.io/ingress.class: nginx
@@ -15,7 +15,12 @@ metadata:
           location ~* /list-credential/ {
               deny all;
               return 403;
-            }
+          }
+
+          location ~* /webhook/topic/ {
+            deny all;
+            return 403;
+          }
 
     # If you encounter a redirect loop or are getting a 307 response code
     # then you need to force the nginx ingress to connect to the backend using HTTPS.
@@ -26,11 +31,31 @@ spec:
     - host: {{ .Values.certificate.host }}
       http:
         paths:
+          - path: /didcomm-base
+            pathType: Exact
+            backend:
+              service:
+                name: managed-identity-wallets-acapy-base
+                port:
+                  number: 8000
+    - host: {{ .Values.certificate.host }}
+      http:
+        paths:
+          - path: /didcomm-managed-wallets
+            pathType: Exact
+            backend:
+              service:
+                name: managed-identity-wallets-acapy-mt
+                port:
+                  number: 8003
+    - host: {{ .Values.certificate.host }}
+      http:
+        paths:
           - path: /(.*)
             pathType: Prefix
             backend:
               service:
-                name: catenax-managed-identity-wallets
+                name: managed-identity-wallets
                 port:
                   number: 8080
   tls:
