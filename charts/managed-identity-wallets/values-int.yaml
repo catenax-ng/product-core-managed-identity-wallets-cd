@@ -63,29 +63,28 @@ resources:
   managedIdentityWallets:
     requests:
       cpu: "1"
-      memory: 256Mi
+      memory: "512Mi"
     limits:
       cpu: "2"
-      memory: 512Mi
+      memory: "512Mi"
   revocationService:
     requests:
       cpu: "1"
-      memory: 512Mi
+      memory: "512Mi"
     limits:
       cpu: "2"
-      memory: 512Mi
+      memory: "512Mi"
   endorserAcapy:          
     requests:
       cpu: "1"
-      memory: 256Mi
+      memory: "256Mi"
     limits:
       cpu: "2"
-      memory: 512Mi
+      memory: "512Mi"
   mtAcapy:
     requests:
       cpu: "1"
-      memory: 256Mi
+      memory: "256Mi"
     limits:
       cpu: "2"
-      memory: 512Mi
-
+      memory: "512Mi"
