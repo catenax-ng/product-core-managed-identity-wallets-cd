@@ -66,29 +66,29 @@ acapypostgresql:
 resources:
   managedIdentityWallets:
     requests:
-      cpu: "500m"
+      cpu: "200m"
       memory: "512Mi"
     limits:
-      cpu: "600m"
+      cpu: "250m"
       memory: "512Mi"
   revocationService:
     requests:
-      cpu: "500m"
+      cpu: "200m"
       memory: "512Mi"
     limits:
-      cpu: "600m"
+      cpu: "250m"
       memory: "512Mi"
   endorserAcapy:          
     requests:
-      cpu: "500m"
+      cpu: "200m"
       memory: "256Mi"
     limits:
-      cpu: "600m"
+      cpu: "250m"
       memory: "512Mi"
   mtAcapy:
     requests:
-      cpu: "500m"
+      cpu: "200m"
       memory: "256Mi"
     limits:
-      cpu: "600m"
+      cpu: "250m"
       memory: "512Mi"
