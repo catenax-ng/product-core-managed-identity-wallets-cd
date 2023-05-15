@@ -16,7 +16,7 @@ auth:
   redirectUrl: "https:/localhost:8080/callback"
 # The image of the Managed Identity Wallets
 image:
-  name: "catenax-ng/tx-managed-identity-wallets_service"
+  name: "eclipse-tractusx/managed-identity-wallets-archived_service"
   registry: "ghcr.io"
   # -- Overrides the image tag whose default is the chart appVersion
   tag: ""
