@@ -6,7 +6,7 @@ wallet:
   baseWalletBpn: "BPNL000000000000"
   baseWalletShortDid: "2xcjN7LjnHGaPdZbbGqju5"
   baseWalletVerkey: "24vdNRCEY5Pswwv3XhbVSccbZA5r4ybxnYVGw3Q6WZjL"
-  baseWalletName: "Catena-X-Int"
+  baseWalletName: "Catena-X-Stable"
   membershipOrganisation: "Catena-X"
 datapool:
   url: "https://partners-pool.stable.demo.catena-x.net"
